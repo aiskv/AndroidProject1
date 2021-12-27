@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/settings_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+    <TextView
+        android:id="@+id/settings_title"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/settings_title"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/result_panel_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/settings_title"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:text="@string/result_panel"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/result_panel_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/result_panel_title"
+        android:textColor="@color/gray"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        tools:text="Hidden"
+        android:textSize="18sp"/>
+    <View
+        android:id="@+id/result_panel"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="@id/result_panel_title"
+        app:layout_constraintBottom_toBottomOf="@id/result_panel_description"
+        style="@style/SelectableItemBackground"
+        />
+
+    <TextView
+        android:id="@+id/set_precision_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/result_panel"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:text="@string/calculation_precision"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/set_precision_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/set_precision_title"
+        android:textColor="@color/gray"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        tools:text="3"
+        android:textSize="18sp"/>
+    <View
+        android:id="@+id/set_precision"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="@id/set_precision_title"
+        app:layout_constraintBottom_toBottomOf="@id/set_precision_description"
+        style="@style/SelectableItemBackground"
+        />
+
+    <TextView
+        android:id="@+id/vibration_feedback_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/set_precision"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:text="@string/vibration_feedback"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/vibration_feedback_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/vibration_feedback_title"
+        android:textColor="@color/gray"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        tools:text="Medium"
+        android:textSize="18sp"/>
+    <View
+        android:id="@+id/vibration_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="@id/vibration_feedback_title"
+        app:layout_constraintBottom_toBottomOf="@id/vibration_feedback_description"
+        style="@style/SelectableItemBackground"
+        />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

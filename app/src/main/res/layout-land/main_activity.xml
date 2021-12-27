@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/main_activity_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:padding="10dp"
+        app:layout_constraintRight_toLeftOf="@+id/main_activity_settings"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_baseline_history_24"/>
+    <ImageView
+        android:id="@+id/main_activity_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:padding="10dp"
+        android:visibility="invisible"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_settings_24" />
+    <LinearLayout
+        android:id="@+id/work_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/input_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/InputField"
+            />
+        <TextView
+            android:id="@+id/output_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CalcViewField"/>
+
+        <LinearLayout
+            android:id="@+id/row0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/row1">
+
+            <TextView
+                android:id="@+id/main_equals"
+                style="@style/LandButton.Operation"
+                android:layout_weight="1"
+                android:text="@string/equals"/>
+            <TextView
+                android:id="@+id/main_all_clear"
+                style="@style/LandButton.Function"
+                android:layout_weight="1"
+                android:text="@string/all_clear_space"/>
+
+            <TextView
+                android:id="@+id/main_clear"
+                style="@style/LandButton.Function"
+                android:layout_weight="1"
+                android:text="@string/clear_space"
+                />
+
+            <TextView
+                android:id="@+id/main_pow"
+                style="@style/LandButton.Operation"
+                android:layout_weight="1"
+                android:text="@string/pow"
+                android:contentDescription="@string/pow_sign"/>
+
+            <TextView
+                android:id="@+id/main_divide"
+                style="@style/LandButton.Operation"
+                android:layout_weight="1"
+                android:text="@string/divider"
+                android:contentDescription="@string/divider"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/row2">
+
+            <TextView
+                android:id="@+id/main_point"
+                style="@style/LandButton.Digit"
+                android:layout_weight="1"
+                android:text="@string/dot"/>
+            <TextView
+                android:id="@+id/main_seven"
+                style="@style/LandButton.Digit"
+                android:layout_weight="1"
+                android:text="@string/_7"/>
+            <TextView
+                android:id="@+id/main_eight"
+                style="@style/LandButton.Digit"
+                android:layout_weight="1"
+                android:text="@string/_8"/>
+
+            <TextView
+                android:id="@+id/main_nine"
+                style="@style/LandButton.Digit"
+                android:layout_weight="1"
+                android:text="@string/_9"/>
+
+            <ImageView
+                android:id="@+id/main_multiply"
+                style="@style/LandButton.Operation"
+                android:layout_weight="1"
+
+                android:contentDescription="@string/multiply"
+                app:srcCompat="@drawable/ic_baseline_clear_24"
+                android:scaleType="center"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/row3">
+
+            <TextView
+                android:id="@+id/main_zero"
+                style="@style/LandButton.Digit"
+                android:layout_weight="1"
+                android:text="@string/_0"/>
+            <TextView
+                android:id="@+id/main_four"
+                style="@style/LandButton.Digit"
+                android:layout_weight="1"
+                android:text="@string/_4"/>
+            <TextView
+                android:id="@+id/main_five"
+                style="@style/LandButton.Digit"
+                android:layout_weight="1"
+                android:text="@string/_5"/>
+
+            <TextView
+                android:id="@+id/main_six"
+                style="@style/LandButton.Digit"
+                android:layout_weight="1"
+                android:text="@string/_6"/>
+
+            <TextView
+                android:id="@+id/main_minus"
+                style="@style/LandButton.Operation"
+                android:layout_weight="1"
+                android:text="@string/minus"
+                android:contentDescription="@string/minus"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/row4">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:layout_width="0dp"/>
+            <TextView
+                android:id="@+id/main_one"
+                style="@style/LandButton.Digit"
+                android:layout_weight="1"
+                android:text="@string/_1"/>
+            <TextView
+                android:id="@+id/main_two"
+                style="@style/LandButton.Digit"
+                android:layout_weight="1"
+                android:text="@string/_2"/>
+
+            <TextView
+                android:id="@+id/main_three"
+                style="@style/LandButton.Digit"
+                android:layout_weight="1"
+                android:text="@string/_3"/>
+
+            <TextView
+                android:id="@+id/main_plus"
+                style="@style/LandButton.Operation"
+                android:layout_weight="1"
+                android:text="@string/plus"
+                android:contentDescription="@string/plus"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

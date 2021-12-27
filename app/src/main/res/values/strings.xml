@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="dot">.</string>
+    <string name="_0">0</string>
+    <string name="equals">=</string>
+    <string name="settings_btn">Настройки</string>
+    <string name="plus">+</string>
+    <string name="_3">3</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+    <string name="_6">6</string>
+    <string name="_5">5</string>
+    <string name="_4">4</string>
+    <string name="minus">-</string>
+    <string name="back">back</string>
+    <string name="memo_button">M</string>
+    <string name="multiply">*</string>
+    <string name="clear_space">C</string>
+    <string name="_9">9</string>
+    <string name="_8">8</string>
+    <string name="_7">7</string>
+    <string name="divider">/</string>
+    <string name="output">32423</string>
+    <string name="result_panel">Result panel</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_result_ok">Ok</string>
+    <string name="settings_result_cancel">Cancel</string>
+    <string name="result_panel_dialog_title">Result Panel</string>
+    <string name="precision_dialog_title">Calculation Precision</string>
+    <string name="vibration_feedback_dialog_title">Vibration Feedback Value</string>
+    <string name="history_title">History</string>
+    <string name="all_clear_space">AC</string>
+    <string name="calculation_precision">Calculation precision</string>
+    <string name="vibration_feedback">Vibration feedback</string>
+    <string name="pow">pow</string>
+    <string name="pow_sign">^</string>
+    <string-array name="result_panel_types">
+        <item>On the left</item>
+        <item>On the right</item>
+        <item>Hidden</item>
+    </string-array>
+    <string-array name="precision_values">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="vibration_feedback_values">
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
+    </string-array>
+</resources>
