@@ -4,8 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.os.VibrationEffect
-import android.os.VibratorManager
 import android.view.Gravity
 import android.view.MenuItem
 import android.widget.PopupMenu
@@ -37,7 +35,7 @@ class MainActivity : BaseActivity(), PopupMenu.OnMenuItemClickListener {
         }
     }
 
-    private lateinit var vibrationEffect: VibrationEffect
+    //private lateinit var vibrationEffect: VibrationEffect
 
     private val resultLauncher = registerForActivityResult(HistoryResult()) { item ->
         viewModel.onHistoryResult(item)
@@ -46,26 +44,21 @@ class MainActivity : BaseActivity(), PopupMenu.OnMenuItemClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val vibratorManager = this.getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
-        val vibrator = vibratorManager.getDefaultVibrator()
 
         setContentView(R.layout.main_activity)
 
         viewBinding.mainActivitySettings.setOnClickListener {
-            vibrator.cancel()
-            vibrator.vibrate(vibrationEffect)
+
             openSettings()
         }
 
         viewBinding.mainActivityHistory.setOnClickListener {
-            vibrator.cancel()
-            vibrator.vibrate(vibrationEffect)
+
             openHistory()
         }
 
         viewBinding.mainEquals.setOnClickListener {
-            vibrator.cancel()
-            vibrator.vibrate(vibrationEffect)
+
             viewModel.onResultClicked()
         }
 
@@ -77,15 +70,13 @@ class MainActivity : BaseActivity(), PopupMenu.OnMenuItemClickListener {
             viewBinding.mainPow
         ).forEach { operationView ->
             operationView.setOnClickListener {
-                vibrator.cancel()
-                vibrator.vibrate(vibrationEffect)
+
                 viewModel.onOperationClicked(operationView.contentDescription.toString())
             }
         }
 
         viewBinding.mainAllClear.setOnClickListener {
-            vibrator.cancel()
-            vibrator.vibrate(vibrationEffect)
+
             viewModel.onAllClearClicked()
         }
 
@@ -102,27 +93,23 @@ class MainActivity : BaseActivity(), PopupMenu.OnMenuItemClickListener {
             viewBinding.mainNine
         ).forEachIndexed { index, textView ->
             textView.setOnClickListener {
-                vibrator.cancel()
-                vibrator.vibrate(vibrationEffect)
+
                 viewModel.onNumberClicked(index)
             }
         }
 
         viewBinding.mainClear.setOnClickListener {
-            vibrator.cancel()
-            vibrator.vibrate(vibrationEffect)
+
             viewModel.onClearClicked()
         }
 
         viewBinding.mainPoint.setOnClickListener {
-            vibrator.cancel()
-            vibrator.vibrate(vibrationEffect)
+
             viewModel.onPointClicked()
         }
 
         viewBinding.mainPow.setOnLongClickListener {
-            vibrator.cancel()
-            vibrator.vibrate(vibrationEffect)
+
             showPowMenu()
             return@setOnLongClickListener true
         }
