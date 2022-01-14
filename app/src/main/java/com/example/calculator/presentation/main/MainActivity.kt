@@ -35,7 +35,7 @@ class MainActivity : BaseActivity(), PopupMenu.OnMenuItemClickListener {
         }
     }
 
-    //private lateinit var vibrationEffect: VibrationEffect
+
 
     private val resultLauncher = registerForActivityResult(HistoryResult()) { item ->
         viewModel.onHistoryResult(item)
@@ -132,14 +132,6 @@ class MainActivity : BaseActivity(), PopupMenu.OnMenuItemClickListener {
             }
         }
 
-//        viewModel.vibrationFeedbackValue.observe(this) {
-//            vibrationEffect = when (it) {
-//                VibrationFeedbackValue.HARD -> VibrationEffect.createPredefined(VibrationEffect.EFFECT_HEAVY_CLICK)
-//                VibrationFeedbackValue.MEDIUM -> VibrationEffect.createOneShot(1000,
-//                    VibrationEffect.DEFAULT_AMPLITUDE)
-//                VibrationFeedbackValue.LOW -> VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK)
-//            }
-//        }
 
     }
 
